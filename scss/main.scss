@@ -1,0 +1,202 @@
+// Colors
+$halloween-orange: #f16718;
+$atomic-tangerine: #ff9b62;
+$yankees-blue: #162542;
+$shadow-blue: #7b8bad;
+$bright-gray: #e8eff2;
+
+// Mixins
+@mixin anchorButton($width, $height, $background, $color) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+  color: $color;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Reset styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Barlow", sans-serif;
+}
+a,
+img {
+  display: block;
+}
+
+// Mobile styles
+body {
+  min-width: 23.4375rem;
+}
+
+header {
+  max-width: 26.5625rem;
+  margin: 0 auto;
+  padding: 1.4375rem 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    @include anchorButton(9.375rem, 3rem, $bright-gray, $yankees-blue);
+    &:hover {
+      background-color: $yankees-blue;
+      color: white;
+      transition: 0.5s;
+    }
+  }
+}
+
+main {
+  max-width: 26.5625rem;
+  margin: 4rem auto 96px;
+  .typemaster-keyboard {
+    margin-bottom: 6.9375rem;
+    h1 {
+      margin: 0 0 2rem;
+      color: $yankees-blue;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 3rem;
+      text-transform: uppercase;
+    }
+    h2 {
+      color: #162542;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 2.25rem;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      padding: 0 36px;
+    }
+    p {
+      color: $shadow-blue;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.625rem;
+    }
+    a {
+      @include anchorButton(9.375rem, 3rem, $halloween-orange, white);
+      &:hover {
+        background-color: $atomic-tangerine;
+        transition: 0.5s;
+      }
+    }
+    span {
+      margin-left: 32px;
+      color: $shadow-blue;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.625rem;
+      text-transform: uppercase;
+    }
+    .item-1 {
+      padding-left: 24px;
+    }
+    .item-1__info {
+      margin-bottom: 4rem;
+      padding-right: 24px;
+    }
+    .item-1__pre-order {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+    }
+    .item-1__image-1 {
+      img {
+        width: 100%;
+        height: 20.6875rem;
+        object-fit: cover;
+        border-radius: 20px 0 0 20px;
+      }
+    }
+    .item-2 {
+      margin: 1.5rem 0 4.6875rem;
+      padding-right: 24px;
+      display: flex;
+    }
+    .item-2__image-1 {
+      background-color: $halloween-orange;
+      border-radius: 0 20px 20px 0;
+      margin-right: 24px;
+      img {
+        width: 6.6875rem;
+        height: 100%;
+        opacity: 0.7486;
+        border-radius: 0 20px 20px 0;
+        mix-blend-mode: multiply;
+        object-fit: cover;
+      }
+    }
+    .item-2__image-2 {
+      img {
+        width: 100%;
+        min-height: 12.0625rem;
+        border-radius: 20px;
+      }
+    }
+    .item-3 {
+      padding: 0 24px;
+      text-align: center;
+    }
+  }
+
+  .typemaster-keyboard-info {
+    display: grid;
+    gap: 4rem;
+    padding: 0 24px;
+    text-align: center;
+    div {
+      width: 4.0625rem;
+      height: 4.0625rem;
+      background-color: $halloween-orange;
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    h2 {
+      margin: 3rem 0 1.5rem;
+      color: $yankees-blue;
+      font-size: 1.5rem;
+      font-size: 900;
+      line-height: 1.75rem;
+      text-transform: uppercase;
+    }
+    p {
+      color: $shadow-blue;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.625rem;
+    }
+  }
+}
+
+footer {
+  color: $shadow-blue;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: center;
+  padding-bottom: 3.125rem;
+  p {
+    font-weight: 500;
+  }
+  span {
+    font-weight: 700;
+  }
+}
