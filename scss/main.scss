@@ -50,6 +50,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
   a {
     @include anchorButton(9.375rem, 3rem, $bright-gray, $yankees-blue);
     &:hover {
@@ -75,7 +79,6 @@ main {
     }
     h2 {
       color: #162542;
-      text-align: center;
       font-size: 2rem;
       font-weight: 900;
       line-height: 2.25rem;
@@ -97,7 +100,7 @@ main {
       }
     }
     span {
-      margin-left: 32px;
+      margin-left: 2rem;
       color: $shadow-blue;
       font-size: 1rem;
       font-weight: 700;
@@ -170,6 +173,22 @@ main {
       align-items: center;
       margin: 0 auto;
     }
+    .info__image-1 {
+      width: 1.625rem;
+      height: 1.3125rem;
+    }
+    .info__image-2 {
+      width: 1.1875rem;
+      height: 1.75rem;
+    }
+    .info__image-3 {
+      width: 2rem;
+      height: 1.3125rem;
+    }
+    .info__image-4 {
+      width: 2rem;
+      height: 2rem;
+    }
     h2 {
       margin: 3rem 0 1.5rem;
       color: $yankees-blue;
@@ -198,5 +217,109 @@ footer {
   }
   span {
     font-weight: 700;
+  }
+}
+
+// Tablet styles
+@media screen and (min-width: 768px) {
+  body {
+    min-width: 48rem;
+  }
+
+  header {
+    max-width: 48rem;
+    padding: 2.5rem 39.5px 0;
+    a {
+      width: 10.9375rem;
+      height: 3.625rem;
+    }
+  }
+
+  main {
+    max-width: 48rem;
+    margin: 3.875rem auto 8.875rem;
+    .typemaster-keyboard {
+      margin-bottom: 8.875rem;
+      h1 {
+        margin-bottom: 2.125rem;
+      }
+      h2 {
+        min-width: 15.9375rem;
+        margin-right: 2.25rem;
+        margin-bottom: 0;
+        padding: 0;
+      }
+      a {
+        width: 10.9375rem;
+        height: 3.625rem;
+      }
+      span {
+        margin-left: 2.3125rem;
+      }
+      .item-1 {
+        padding-left: 39.5008px;
+        display: flex;
+        align-items: center;
+      }
+      .item-1__info {
+        margin-right: 66.5px;
+        margin-bottom: 0;
+        padding-right: 0;
+        max-width: 21.3125rem;
+      }
+      .item-1__pre-order {
+        margin-top: 2.4375rem;
+      }
+      .item-1__image-1 {
+        img {
+          height: 26.5625rem;
+          object-position: 0;
+        }
+      }
+      .item-2 {
+        margin: 2.5rem 0 4.5rem;
+        padding: 0 39.5px;
+        justify-content: space-between;
+      }
+      .item-2__image-1 {
+        border-radius: 20px;
+        margin-right: 30px;
+        img {
+          width: 13.375rem;
+          border-radius: 20px;
+        }
+      }
+      .item-2__image-2 {
+        img {
+          width: 100%;
+          height: 20rem;
+        }
+      }
+      .item-3 {
+        padding: 0 39.5px;
+        text-align: start;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .typemaster-keyboard-info {
+      min-height: 40.625rem;
+      grid-template-columns: repeat(2, 17.5625rem);
+      gap: 69px 4.5rem;
+      padding-left: 39.5px;
+      padding-right: 97.5px;
+      text-align: start;
+      div {
+        margin: 0;
+      }
+      h2 {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  footer {
+    padding-bottom: 2.6875rem;
   }
 }
